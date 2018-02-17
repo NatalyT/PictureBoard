@@ -16,14 +16,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    NSArray *urlArray = [self splitFileToArray];
+    [self loadImageFromURL: urlArray[0]];
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
+-(void) loadImageFromURL :(NSString *)imageUrl{
+    NSURL *urlForImage = [NSURL URLWithString: imageUrl];
+    NSData *dataImage = [NSData dataWithContentsOfURL: urlForImage];
+    UIImage *imageData = [UIImage imageWithData: dataImage];
+    _imageView.image = imageData;
+}
+
+-(NSArray*) splitFileToArray {
+    NSURL *url = [[NSBundle mainBundle] URLForResource: @"url20" withExtension: @"txt"];
+    NSString *fileViaURL = [[NSString alloc] initWithContentsOfURL: url encoding: NSUTF8StringEncoding error: nil];
+    NSArray *urlArray = [fileViaURL componentsSeparatedByString: @"\n"];
+    return urlArray;
+}
 
 @end
