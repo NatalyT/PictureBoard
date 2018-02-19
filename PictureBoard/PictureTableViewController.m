@@ -15,22 +15,24 @@
 @implementation PictureTableViewController
 
 NSArray *urlArray;
+Picture *pictureObject;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    urlArray = [self splitFileToArray];
+    pictureObject = [[Picture alloc]init];
+    urlArray = [pictureObject fetchAll];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 
-- (NSInteger) tableView: (UITableView *) tableView numberOfRowsInSection: (NSInteger) section
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [urlArray count];
 }
 
-- (UITableViewCell *) tableView: (UITableView *) tableView cellForRowAtIndexPath: (NSIndexPath *) indexPath
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *pictureTableIdentifier = @"PictureTableCell";
     
@@ -49,18 +51,11 @@ NSArray *urlArray;
     return cell;
 }
 
-- (UIImage *) loadImageFromURL : (NSString *) imageUrl{
+- (UIImage *)loadImageFromURL:(NSString *)imageUrl {
     NSURL *urlForImage = [NSURL URLWithString: imageUrl];
     NSData *dataImage = [NSData dataWithContentsOfURL: urlForImage];
     UIImage *imageData = [UIImage imageWithData: dataImage];
     return imageData;
-}
-
-- (NSArray*) splitFileToArray {
-    NSURL *url = [[NSBundle mainBundle] URLForResource: @"url20" withExtension: @"txt"];
-    NSString *fileViaURL = [[NSString alloc] initWithContentsOfURL: url encoding: NSUTF8StringEncoding error: nil];
-    NSArray *urlArray = [fileViaURL componentsSeparatedByString: @"\n"];
-    return urlArray;
 }
 
 @end

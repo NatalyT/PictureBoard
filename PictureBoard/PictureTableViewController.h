@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Picture.h"
 
 @interface PictureTableViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 

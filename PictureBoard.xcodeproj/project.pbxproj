@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C18E2DAA203B38C500F07C95 /* Picture.m in Sources */ = {isa = PBXBuildFile; fileRef = C18E2DA9203B38C500F07C95 /* Picture.m */; };
 		C1E52A872038ABAA006D91F6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E52A862038ABAA006D91F6 /* AppDelegate.m */; };
 		C1E52A8A2038ABAA006D91F6 /* PictureTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E52A892038ABAA006D91F6 /* PictureTableViewController.m */; };
 		C1E52A8D2038ABAA006D91F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1E52A8B2038ABAA006D91F6 /* Main.storyboard */; };
@@ -16,7 +17,6 @@
 		C1E52A982038ABAA006D91F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E52A972038ABAA006D91F6 /* main.m */; };
 		C1E52AA22038ABAA006D91F6 /* PictureBoardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E52AA12038ABAA006D91F6 /* PictureBoardTests.m */; };
 		C1E52AAD2038ABAA006D91F6 /* PictureBoardUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E52AAC2038ABAA006D91F6 /* PictureBoardUITests.m */; };
-		C1E52ABB2038B095006D91F6 /* url20.txt in Resources */ = {isa = PBXBuildFile; fileRef = C1E52ABA2038B095006D91F6 /* url20.txt */; };
 		C1E52ABD2038DCA2006D91F6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1E52ABC2038DCA2006D91F6 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C18E2DA8203B38C500F07C95 /* Picture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Picture.h; sourceTree = "<group>"; };
+		C18E2DA9203B38C500F07C95 /* Picture.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Picture.m; sourceTree = "<group>"; };
 		C1E52A822038ABAA006D91F6 /* PictureBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PictureBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1E52A852038ABAA006D91F6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C1E52A862038ABAA006D91F6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -55,7 +57,6 @@
 		C1E52AA82038ABAA006D91F6 /* PictureBoardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PictureBoardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1E52AAC2038ABAA006D91F6 /* PictureBoardUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PictureBoardUITests.m; sourceTree = "<group>"; };
 		C1E52AAE2038ABAA006D91F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C1E52ABA2038B095006D91F6 /* url20.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = url20.txt; sourceTree = "<group>"; };
 		C1E52ABC2038DCA2006D91F6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,7 +119,8 @@
 				C1E52A962038ABAA006D91F6 /* Info.plist */,
 				C1E52A972038ABAA006D91F6 /* main.m */,
 				C1E52A8E2038ABAA006D91F6 /* PictureBoard.xcdatamodeld */,
-				C1E52ABA2038B095006D91F6 /* url20.txt */,
+				C18E2DA8203B38C500F07C95 /* Picture.h */,
+				C18E2DA9203B38C500F07C95 /* Picture.m */,
 			);
 			path = PictureBoard;
 			sourceTree = "<group>";
@@ -247,7 +249,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1E52ABB2038B095006D91F6 /* url20.txt in Resources */,
 				C1E52A952038ABAA006D91F6 /* LaunchScreen.storyboard in Resources */,
 				C1E52A922038ABAA006D91F6 /* Assets.xcassets in Resources */,
 				C1E52ABD2038DCA2006D91F6 /* Default-568h@2x.png in Resources */,
@@ -277,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1E52A902038ABAA006D91F6 /* PictureBoard.xcdatamodeld in Sources */,
+				C18E2DAA203B38C500F07C95 /* Picture.m in Sources */,
 				C1E52A8A2038ABAA006D91F6 /* PictureTableViewController.m in Sources */,
 				C1E52A982038ABAA006D91F6 /* main.m in Sources */,
 				C1E52A872038ABAA006D91F6 /* AppDelegate.m in Sources */,
