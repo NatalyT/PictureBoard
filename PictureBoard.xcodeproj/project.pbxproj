@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C1E52A872038ABAA006D91F6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E52A862038ABAA006D91F6 /* AppDelegate.m */; };
-		C1E52A8A2038ABAA006D91F6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E52A892038ABAA006D91F6 /* ViewController.m */; };
+		C1E52A8A2038ABAA006D91F6 /* PictureTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E52A892038ABAA006D91F6 /* PictureTableViewController.m */; };
 		C1E52A8D2038ABAA006D91F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1E52A8B2038ABAA006D91F6 /* Main.storyboard */; };
 		C1E52A902038ABAA006D91F6 /* PictureBoard.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C1E52A8E2038ABAA006D91F6 /* PictureBoard.xcdatamodeld */; };
 		C1E52A922038ABAA006D91F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1E52A912038ABAA006D91F6 /* Assets.xcassets */; };
@@ -41,8 +41,8 @@
 		C1E52A822038ABAA006D91F6 /* PictureBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PictureBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1E52A852038ABAA006D91F6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C1E52A862038ABAA006D91F6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C1E52A882038ABAA006D91F6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C1E52A892038ABAA006D91F6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C1E52A882038ABAA006D91F6 /* PictureTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PictureTableViewController.h; sourceTree = "<group>"; };
+		C1E52A892038ABAA006D91F6 /* PictureTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PictureTableViewController.m; sourceTree = "<group>"; };
 		C1E52A8C2038ABAA006D91F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C1E52A8F2038ABAA006D91F6 /* PictureBoard.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PictureBoard.xcdatamodel; sourceTree = "<group>"; };
 		C1E52A912038ABAA006D91F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -110,8 +110,8 @@
 			children = (
 				C1E52A852038ABAA006D91F6 /* AppDelegate.h */,
 				C1E52A862038ABAA006D91F6 /* AppDelegate.m */,
-				C1E52A882038ABAA006D91F6 /* ViewController.h */,
-				C1E52A892038ABAA006D91F6 /* ViewController.m */,
+				C1E52A882038ABAA006D91F6 /* PictureTableViewController.h */,
+				C1E52A892038ABAA006D91F6 /* PictureTableViewController.m */,
 				C1E52A8B2038ABAA006D91F6 /* Main.storyboard */,
 				C1E52A912038ABAA006D91F6 /* Assets.xcassets */,
 				C1E52A932038ABAA006D91F6 /* LaunchScreen.storyboard */,
@@ -277,7 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1E52A902038ABAA006D91F6 /* PictureBoard.xcdatamodeld in Sources */,
-				C1E52A8A2038ABAA006D91F6 /* ViewController.m in Sources */,
+				C1E52A8A2038ABAA006D91F6 /* PictureTableViewController.m in Sources */,
 				C1E52A982038ABAA006D91F6 /* main.m in Sources */,
 				C1E52A872038ABAA006D91F6 /* AppDelegate.m in Sources */,
 			);
