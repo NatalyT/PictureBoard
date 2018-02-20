@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		C18E2DAA203B38C500F07C95 /* Picture.m in Sources */ = {isa = PBXBuildFile; fileRef = C18E2DA9203B38C500F07C95 /* Picture.m */; };
+		C18E2DAD203C3CA800F07C95 /* SinglePictureTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C18E2DAC203C3CA800F07C95 /* SinglePictureTableViewCell.m */; };
+		C18E2DB0203C3CCC00F07C95 /* DoublePictureTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C18E2DAF203C3CCC00F07C95 /* DoublePictureTableViewCell.m */; };
+		C18E2DB3203C3CF200F07C95 /* TripplePictureTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C18E2DB2203C3CF200F07C95 /* TripplePictureTableViewCell.m */; };
 		C1E52A872038ABAA006D91F6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E52A862038ABAA006D91F6 /* AppDelegate.m */; };
 		C1E52A8A2038ABAA006D91F6 /* PictureTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E52A892038ABAA006D91F6 /* PictureTableViewController.m */; };
 		C1E52A8D2038ABAA006D91F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1E52A8B2038ABAA006D91F6 /* Main.storyboard */; };
@@ -40,6 +43,12 @@
 /* Begin PBXFileReference section */
 		C18E2DA8203B38C500F07C95 /* Picture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Picture.h; sourceTree = "<group>"; };
 		C18E2DA9203B38C500F07C95 /* Picture.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Picture.m; sourceTree = "<group>"; };
+		C18E2DAB203C3CA800F07C95 /* SinglePictureTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SinglePictureTableViewCell.h; sourceTree = "<group>"; };
+		C18E2DAC203C3CA800F07C95 /* SinglePictureTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SinglePictureTableViewCell.m; sourceTree = "<group>"; };
+		C18E2DAE203C3CCC00F07C95 /* DoublePictureTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoublePictureTableViewCell.h; sourceTree = "<group>"; };
+		C18E2DAF203C3CCC00F07C95 /* DoublePictureTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoublePictureTableViewCell.m; sourceTree = "<group>"; };
+		C18E2DB1203C3CF200F07C95 /* TripplePictureTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TripplePictureTableViewCell.h; sourceTree = "<group>"; };
+		C18E2DB2203C3CF200F07C95 /* TripplePictureTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TripplePictureTableViewCell.m; sourceTree = "<group>"; };
 		C1E52A822038ABAA006D91F6 /* PictureBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PictureBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1E52A852038ABAA006D91F6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C1E52A862038ABAA006D91F6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -121,6 +130,12 @@
 				C1E52A8E2038ABAA006D91F6 /* PictureBoard.xcdatamodeld */,
 				C18E2DA8203B38C500F07C95 /* Picture.h */,
 				C18E2DA9203B38C500F07C95 /* Picture.m */,
+				C18E2DAB203C3CA800F07C95 /* SinglePictureTableViewCell.h */,
+				C18E2DAC203C3CA800F07C95 /* SinglePictureTableViewCell.m */,
+				C18E2DAE203C3CCC00F07C95 /* DoublePictureTableViewCell.h */,
+				C18E2DAF203C3CCC00F07C95 /* DoublePictureTableViewCell.m */,
+				C18E2DB1203C3CF200F07C95 /* TripplePictureTableViewCell.h */,
+				C18E2DB2203C3CF200F07C95 /* TripplePictureTableViewCell.m */,
 			);
 			path = PictureBoard;
 			sourceTree = "<group>";
@@ -279,9 +294,12 @@
 			files = (
 				C1E52A902038ABAA006D91F6 /* PictureBoard.xcdatamodeld in Sources */,
 				C18E2DAA203B38C500F07C95 /* Picture.m in Sources */,
+				C18E2DB0203C3CCC00F07C95 /* DoublePictureTableViewCell.m in Sources */,
+				C18E2DAD203C3CA800F07C95 /* SinglePictureTableViewCell.m in Sources */,
 				C1E52A8A2038ABAA006D91F6 /* PictureTableViewController.m in Sources */,
 				C1E52A982038ABAA006D91F6 /* main.m in Sources */,
 				C1E52A872038ABAA006D91F6 /* AppDelegate.m in Sources */,
+				C18E2DB3203C3CF200F07C95 /* TripplePictureTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
