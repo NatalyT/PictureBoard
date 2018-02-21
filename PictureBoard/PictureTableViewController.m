@@ -46,11 +46,18 @@ Picture *pictureObject;
     return cell;
 }
 
-- (UIImage *)loadImageFromURL:(NSString *)imageUrl {
-    NSURL *urlForImage = [NSURL URLWithString: imageUrl];
-    NSData *dataImage = [NSData dataWithContentsOfURL: urlForImage];
-    UIImage *imageData = [UIImage imageWithData: dataImage];
-    return imageData;
+- (void)loadImageFromURL:(NSString *)imageUrl :(UIImageView *)imageView {
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
+                   ^{
+                       NSURL *urlForImage = [NSURL URLWithString: imageUrl];
+                       NSData *dataImage = [NSData dataWithContentsOfURL: urlForImage];
+                       
+                       dispatch_sync(dispatch_get_main_queue(), ^{
+                           UIImage *imageData = [UIImage imageWithData: dataImage];
+                           imageView.image = imageData;
+                       });
+                   });
 }
 
 - (NSUInteger) calculatePictureNumber:(NSInteger) row {
@@ -64,7 +71,8 @@ Picture *pictureObject;
     static NSString *singlePictureTableIdentifier = @"SinglePictureTableCell";
     SinglePictureTableViewCell *cell = (SinglePictureTableViewCell *)[tableView dequeueReusableCellWithIdentifier:singlePictureTableIdentifier forIndexPath:indexPath];
     NSInteger pictureNumber = [self calculatePictureNumber:indexPath.row];
-    cell.singleImageView.image = [self loadImageFromURL: [urlArray objectAtIndex:pictureNumber]];
+    NSString *imageUrl = [urlArray objectAtIndex:pictureNumber];
+    [self loadImageFromURL: imageUrl :cell.singleImageView];
     if (cell == nil) {
         cell = [[SinglePictureTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:singlePictureTableIdentifier];
     }
@@ -75,8 +83,10 @@ Picture *pictureObject;
     static NSString *doublePictureTableIdentifier = @"DoublePictureTableCell";
     DoublePictureTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:doublePictureTableIdentifier forIndexPath:indexPath];
     NSInteger pictureNumber = [self calculatePictureNumber:indexPath.row];
-    cell.doubleImageViewLeft.image = [self loadImageFromURL: [urlArray objectAtIndex:pictureNumber]];
-    cell.doubleImageViewRight.image = [self loadImageFromURL: [urlArray objectAtIndex:pictureNumber + 1]];
+    NSString *leftImageUrl = [urlArray objectAtIndex:pictureNumber];
+    [self loadImageFromURL: leftImageUrl :cell.doubleImageViewLeft];
+    NSString *rightImageUrl = [urlArray objectAtIndex:pictureNumber + 1];
+    [self loadImageFromURL: rightImageUrl :cell.doubleImageViewRight];
     if (cell == nil) {
         cell = [[DoublePictureTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:doublePictureTableIdentifier];
     }
@@ -87,9 +97,12 @@ Picture *pictureObject;
     static NSString *tripplePictureTableIdentifier = @"TripplePictureTableCell";
     TripplePictureTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:tripplePictureTableIdentifier forIndexPath:indexPath];
     NSInteger pictureNumber = [self calculatePictureNumber:indexPath.row];
-    cell.trippleImageViewLeft.image = [self loadImageFromURL: [urlArray objectAtIndex:pictureNumber - 2]];
-    cell.trippleImageViewCenter.image = [self loadImageFromURL: [urlArray objectAtIndex:pictureNumber - 1]];
-    cell.trippleImageViewRight.image = [self loadImageFromURL: [urlArray objectAtIndex:pictureNumber]];
+    NSString *leftImageUrl = [urlArray objectAtIndex:pictureNumber - 2];
+    [self loadImageFromURL: leftImageUrl :cell.trippleImageViewLeft];
+    NSString *centerImageUrl = [urlArray objectAtIndex:pictureNumber - 1];
+    [self loadImageFromURL: centerImageUrl :cell.trippleImageViewCenter];
+    NSString *rightImageUrl = [urlArray objectAtIndex:pictureNumber];
+    [self loadImageFromURL: rightImageUrl :cell.trippleImageViewRight];
     if (cell == nil) {
         cell = [[TripplePictureTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:tripplePictureTableIdentifier];
     }

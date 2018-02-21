@@ -35,7 +35,7 @@
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vgp-EZ-2RP">
                                                             <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="120" id="F1D-Hh-tk8"/>
+                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="F1D-Hh-tk8"/>
                                                             </constraints>
                                                         </imageView>
                                                     </subviews>
@@ -59,19 +59,19 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="00f-gf-ert">
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="00f-gf-ert">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="T5r-Y1-UdU">
                                                             <rect key="frame" x="0.0" y="0.0" width="187.5" height="120"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="120" id="BmT-Vs-K2k"/>
+                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="BmT-Vs-K2k"/>
                                                             </constraints>
                                                         </imageView>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eax-b2-kS3">
                                                             <rect key="frame" x="187.5" y="0.0" width="187.5" height="120"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="120" id="fJo-Kc-Z0m"/>
+                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="fJo-Kc-Z0m"/>
                                                             </constraints>
                                                         </imageView>
                                                     </subviews>
@@ -104,26 +104,26 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="220" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="4s4-jM-Phq">
+                                                <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="220" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="4s4-jM-Phq">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nAU-XW-Vmt">
                                                             <rect key="frame" x="0.0" y="0.0" width="125" height="120"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="125" id="cHf-Q2-Ff5"/>
-                                                                <constraint firstAttribute="height" constant="120" id="cil-2I-P5Z"/>
+                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="cil-2I-P5Z"/>
                                                             </constraints>
                                                         </imageView>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QBd-7c-2t7">
                                                             <rect key="frame" x="125" y="0.0" width="125" height="120"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="120" id="aYH-PU-ARa"/>
+                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="aYH-PU-ARa"/>
                                                             </constraints>
                                                         </imageView>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pCw-xP-yqQ">
                                                             <rect key="frame" x="250" y="0.0" width="125" height="120"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="120" id="Idc-b7-Uvt"/>
+                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="Idc-b7-Uvt"/>
                                                             </constraints>
                                                         </imageView>
                                                     </subviews>
