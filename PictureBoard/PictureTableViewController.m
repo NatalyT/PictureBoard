@@ -70,9 +70,12 @@ Picture *pictureObject;
 - (SinglePictureTableViewCell *) renderSinglePicture: (UITableView *)tableView :(NSIndexPath *)indexPath {
     static NSString *singlePictureTableIdentifier = @"SinglePictureTableCell";
     SinglePictureTableViewCell *cell = (SinglePictureTableViewCell *)[tableView dequeueReusableCellWithIdentifier:singlePictureTableIdentifier forIndexPath:indexPath];
+    cell.singleImageView.image = [UIImage imageNamed:@"Placeholder.png"];
+    
     NSInteger pictureNumber = [self calculatePictureNumber:indexPath.row];
     NSString *imageUrl = [urlArray objectAtIndex:pictureNumber];
     [self loadImageFromURL: imageUrl :cell.singleImageView];
+    
     if (cell == nil) {
         cell = [[SinglePictureTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:singlePictureTableIdentifier];
     }
@@ -83,10 +86,14 @@ Picture *pictureObject;
     static NSString *doublePictureTableIdentifier = @"DoublePictureTableCell";
     DoublePictureTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:doublePictureTableIdentifier forIndexPath:indexPath];
     NSInteger pictureNumber = [self calculatePictureNumber:indexPath.row];
+    cell.doubleImageViewLeft.image = [UIImage imageNamed:@"Placeholder.png"];
+    cell.doubleImageViewRight.image = [UIImage imageNamed:@"Placeholder.png"];
+    
     NSString *leftImageUrl = [urlArray objectAtIndex:pictureNumber];
     [self loadImageFromURL: leftImageUrl :cell.doubleImageViewLeft];
     NSString *rightImageUrl = [urlArray objectAtIndex:pictureNumber + 1];
     [self loadImageFromURL: rightImageUrl :cell.doubleImageViewRight];
+    
     if (cell == nil) {
         cell = [[DoublePictureTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:doublePictureTableIdentifier];
     }
@@ -97,12 +104,18 @@ Picture *pictureObject;
     static NSString *tripplePictureTableIdentifier = @"TripplePictureTableCell";
     TripplePictureTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:tripplePictureTableIdentifier forIndexPath:indexPath];
     NSInteger pictureNumber = [self calculatePictureNumber:indexPath.row];
+    cell.trippleImageViewLeft.image = [UIImage imageNamed:@"Placeholder.png"];
+    cell.trippleImageViewCenter.image = [UIImage imageNamed:@"Placeholder.png"];
+    cell.trippleImageViewRight.image = [UIImage imageNamed:@"Placeholder.png"];
+    
+    
     NSString *leftImageUrl = [urlArray objectAtIndex:pictureNumber - 2];
     [self loadImageFromURL: leftImageUrl :cell.trippleImageViewLeft];
     NSString *centerImageUrl = [urlArray objectAtIndex:pictureNumber - 1];
     [self loadImageFromURL: centerImageUrl :cell.trippleImageViewCenter];
     NSString *rightImageUrl = [urlArray objectAtIndex:pictureNumber];
     [self loadImageFromURL: rightImageUrl :cell.trippleImageViewRight];
+    
     if (cell == nil) {
         cell = [[TripplePictureTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:tripplePictureTableIdentifier];
     }
